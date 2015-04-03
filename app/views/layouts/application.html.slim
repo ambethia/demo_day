@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title The Iron Yard - Tampa/St Pete - Demo Day
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    = yield
+    .container-fluid.gray-light-bg.contact
+      .callout-box
+        .row
+          .col-md-4
+            h4 Questions? Want to know what makes us different?
+          .col-md-8
+            a.btn href='tel:+18137752275'
+              = fa_icon "mobile"
+              | &nbsp; +1 (813) 775-2275
+            | &nbsp;&nbsp;
+            a.btn href='mailto:tampabay@theironyard.com'
+              = fa_icon "paper-plane"
+              | &nbsp; tampabay@theironyard.com
+    .container-fluid.gray-dark-bg
+      .footer
+        .row
+          .col-md-6
+            .tiy-logo
+              = image_tag('iron-yard-logo.svg')
+          .com-md-6
+            .social-nav
+              ul
+                li
+                  a.ss-icon href="http://twitter.com/theironyard" Twitter
+                li
+                  a.ss-icon href="http://facebook.com/theironyard" Facebook
+                li
+                  a.ss-icon href="http://vimeo.com/theironyard" Vimeo
+                li
+                  a.ss-icon href="http://instagram.com/theironyard" Instagram
+
+            .copyright &copy;2015 Iron Yard. All Rights Reserved
+    script src="//use.typekit.net/hfw2vqe.js"
+    script try{Typekit.load();}catch(e){}
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true

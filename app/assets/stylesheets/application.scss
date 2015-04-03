@@ -1,0 +1,141 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+@import "ghost-shield";
+@import "font-awesome";
+@import "ss-social";
+
+@mixin vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.tiy-logo {
+  padding-top: 20px;
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
+
+.social-nav {
+  padding-top: 34px;
+  @media (max-width: 992px) {
+    padding-top: 0px;
+  }
+}
+
+.footer {
+  margin-top: 0;
+  height: auto;
+}
+
+.contact .callout-box {
+  margin-bottom: 0;
+
+  @media (max-width: 992px) {
+    a.btn {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.heading {
+  padding: 32px 0 16px;
+  .logo {
+    text-align: center;
+    margin: 0 20px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+
+      @media (max-width: 992px) {
+        width: 75%;
+      }
+    }
+  }
+  .learn-more {
+    text-align: right;
+  }
+}
+
+.program-logo {
+  text-align: center;
+}
+
+.program {
+  margin-top: 36px;
+
+  &.fee {
+    h2 {
+      color: #49331e;
+    }
+  }
+
+  &.rails {
+    h2 {
+      color: #4a302e;
+    }
+  }
+}
+
+.demo {
+  margin-bottom: 32px;
+
+  .visit {
+    text-align: right;
+
+    a.btn {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 992px) {
+      text-align: center;
+      a.btn {
+        margin: 10px 5px;
+      }
+    }
+  }
+
+  h3, h4, .byline {
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0px;
+    border-bottom: 2px solid $gray-light;
+  }
+
+  .byline {
+    margin-top: 0px;
+  }
+
+  ul.social {
+    margin-left: 0;
+    text-align: right;
+
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+
+    li {
+      display: inline;
+      list-syle: none;
+      font-size: 34px;
+      padding-right: 5px;
+      a {
+        color: $gray-dark;
+
+        &:hover {
+          color: $blue-link;
+        }
+      }
+    }
+  }
+
+}
