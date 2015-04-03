@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
+
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'puma'
@@ -24,6 +26,4 @@ group :development, :test do
   gem 'spring'
 end
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-ghost-shield'
-end
+gem 'rails_12factor', group: :production
