@@ -42,21 +42,35 @@
 }
 
 .heading {
+  background-image:  image-url('2015_spring.png');
+  background-size:   cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
   padding: 32px 0 16px;
+
+  h1 {
+    text-align: center;
+    margin: 280px 0 20px 0;
+  }
+}
+
+.about {
   .logo {
     text-align: center;
-    margin: 0 20px;
+    padding: 20px 20px 0;
 
     img {
       width: 100%;
-      max-width: 100%;
+      max-width: 200px;
 
       @media (max-width: 992px) {
-        width: 75%;
+        width: 50%;
       }
     }
   }
-  .learn-more {
+
+  p.learn-more {
     text-align: right;
   }
 }
