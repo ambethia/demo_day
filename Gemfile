@@ -11,14 +11,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'bourbon'
 gem 'slim-rails'
-gem 'react-rails'
 gem "font-awesome-rails"
 gem 'therubyracer', platforms: :ruby
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'cloudinary'
+
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
