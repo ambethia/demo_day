@@ -4,6 +4,7 @@ ActiveAdmin.register Student do
   index do
     selectable_column
     column :name
+    column :project
     img_column :headshot_img
     actions
   end

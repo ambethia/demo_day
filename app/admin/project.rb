@@ -4,8 +4,8 @@ ActiveAdmin.register Project do
   index do
     selectable_column
     column :title
-    column :cohort_id
-    column :program_id
+    column :cohort
+    column :program
     actions
   end
 
