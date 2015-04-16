@@ -16,6 +16,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'carrierwave'
 gem 'cloudinary'
 
 gem 'jquery-rails'

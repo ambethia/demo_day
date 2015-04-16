@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415152926) do
+ActiveRecord::Schema.define(version: 20150416031211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,50 @@ ActiveRecord::Schema.define(version: 20150415152926) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
+  create_table "cohorts", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "is_current"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "logo_img"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "short_name"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "cohort_id"
+    t.integer  "program_id"
+    t.string   "title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "web_url"
+    t.string   "repo_url"
+    t.text     "description"
+  end
+
+  add_index "projects", ["cohort_id"], name: "index_projects_on_cohort_id", using: :btree
+  add_index "projects", ["program_id"], name: "index_projects_on_program_id", using: :btree
+
+  create_table "students", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "twitter"
+    t.string   "github"
+    t.text     "bio"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "headshot_img"
+    t.string   "portfolio_url"
+  end
+
+  add_index "students", ["project_id"], name: "index_students_on_project_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -49,4 +93,7 @@ ActiveRecord::Schema.define(version: 20150415152926) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "projects", "cohorts"
+  add_foreign_key "projects", "programs"
+  add_foreign_key "students", "projects"
 end

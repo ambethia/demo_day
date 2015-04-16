@@ -1,8 +1,6 @@
 .jumbotron.gray-dark-bg.heading
-  .container
-    .row
-      .col-lg-12
-        h1 Welcome to Demo Day!
+  .container#welcome
+    h1 Welcome to Demo Day!
 
 .container-fluid.gray-light-bg.about
   .container
@@ -18,85 +16,4 @@
         p.learn-more
           a class="btn btn-primary btn-lg" href="http://theironyard.com/locations/tampa-st-petersburg/" role="button" Learn more
 
-
-.container-fluid
-  .program.fee
-    .program-logo
-      = image_tag 'FrontEnd-Shield.png', size: '143x128', alt: 'Front End Shield'
-      h2 Front End Engineering
-
-.container
-  .demo
-    .row
-      .col-md-12
-        h3 Project Name
-        p.byline
-          i
-            ' Built by:
-          strong Student Name(s)
-    .row
-      .col-md-8.description
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore nesciunt impedit, sunt unde placeat cupiditate commodi odio dolor nihil doloremque eligendi vero rem magni enim blanditiis culpa, fugiat deleniti.
-      .col-md-4.visit
-        a class="btn btn-primary btn-default" href="#" role="button"
-          = fa_icon "link"
-          | &nbsp; Visit Demo
-        a class="btn btn-primary btn-default" href="#" role="button"
-          = fa_icon "code-fork"
-          | &nbsp; Browse Source
-    .row
-      .col-lg-3.col-md-4
-        img.img-responsive.photo-bio src="https://placekitten.com/g/300/300"
-      .col-lg-9.col-md-8
-        h4 About Student Name
-        .biography
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fuga delectus quod quas, sit obcaecati consectetur ad molestiae itaque necessitatibus nam ipsa sunt quasi eveniet veritatis repudiandae omnis, provident corporis.
-        ul.social
-          li
-            a href="#" = fa_icon "github-alt"
-          li
-            a href="#" = fa_icon "twitter"
-          li
-            a href="#" = fa_icon "envelope"
-
-  hr
-
-.container-fluid
-  .program.rails
-    .program-logo
-      = image_tag 'Rails-Shield.png', size: '143x128', alt: 'Rails Shield'
-      h2 Rails Engineering
-
-.container
-  .demo
-    .row
-      .col-md-12
-        h3 Project Name
-        p.byline
-          i
-            ' Built by:
-          strong Student Name(s)
-    .row
-      .col-md-8.description
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore nesciunt impedit, sunt unde placeat cupiditate commodi odio dolor nihil doloremque eligendi vero rem magni enim blanditiis culpa, fugiat deleniti.
-      .col-md-4.visit
-        a class="btn btn-primary btn-default" href="#" role="button"
-          = fa_icon "link"
-          | &nbsp; Visit Demo
-        a class="btn btn-primary btn-default" href="#" role="button"
-          = fa_icon "code-fork"
-          | &nbsp; Browse Source
-    .row
-      .col-lg-3.col-md-4
-        img.img-responsive.photo-bio src="https://placekitten.com/g/300/300"
-      .col-lg-9.col-md-8
-        h4 About Student Name
-        .biography
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fuga delectus quod quas, sit obcaecati consectetur ad molestiae itaque necessitatibus nam ipsa sunt quasi eveniet veritatis repudiandae omnis, provident corporis.
-        ul.social
-          li
-            a href="#" = fa_icon "github-alt"
-          li
-            a href="#" = fa_icon "twitter"
-          li
-            a href="#" = fa_icon "envelope"
+= render @programs

@@ -1,0 +1,7 @@
+.container-fluid
+  .program(class=program.short_name)
+    .program-logo
+      = image_tag program.logo_img_url, size: '143x128', alt: "#{program.title} Shield"
+      h2= program.title
+
+= render program.projects

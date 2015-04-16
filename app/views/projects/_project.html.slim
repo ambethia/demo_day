@@ -1,0 +1,38 @@
+.container
+  .demo
+    .row
+      .col-md-12
+        h3 = project.title
+        p.byline
+          i
+            ' Built by:
+          strong = project.students.map(&:name).to_sentence
+    .row
+      .col-md-8.description
+        = simple_format project.description
+      .col-md-4.visit
+        - unless project.web_url.blank?
+          a class="btn btn-primary btn-default" href=project.web_url role="button"
+            = fa_icon "link"
+            | &nbsp; Visit Demo
+        - unless project.repo_url.blank?
+          a class="btn btn-primary btn-default" href=project.repo_url role="button"
+            = fa_icon "code-fork"
+            | &nbsp; Browse Source
+    - project.students.each do |student|
+      .row
+        .col-lg-3.col-md-4
+          img.img-responsive.photo-bio src=student.headshot_img_url
+        .col-lg-9.col-md-8
+          h4 About #{student.name}
+          .biography
+            = simple_format student.bio
+          ul.social
+            - unless student.github.blank?
+              li = mail_to(student.github, fa_icon("github-alt"))
+            - unless student.twitter.blank?
+              li = mail_to(student.twitter, fa_icon("twitter"))
+            - unless student.email.blank?
+              li = mail_to(student.email, fa_icon("envelope"))
+
+  hr
