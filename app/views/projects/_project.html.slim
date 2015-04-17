@@ -29,9 +29,9 @@
             = simple_format student.bio
           ul.social
             - unless student.github.blank?
-              li = link_to("https://github.com/#{student.github}", fa_icon("github-alt"))
+              li = link_to(fa_icon("github-alt"), "https://github.com/#{student.github}")
             - unless student.twitter.blank?
-              li = mail_to("https://twitter.com/#{student.twitter}", fa_icon("twitter"))
+              li = link_to(fa_icon("twitter"), "https://twitter.com/#{student.twitter}")
             - unless student.email.blank?
               li = mail_to(student.email, fa_icon("envelope"))
 
