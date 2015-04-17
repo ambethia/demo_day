@@ -6,7 +6,7 @@ ActiveAdmin.register Project do
     column :title
     column :cohort
     column :program
-    colomn :order
+    column :order
     actions
   end
 end
