@@ -8,5 +8,4 @@ ActiveAdmin.register Project do
     column :program
     actions
   end
-
 end
