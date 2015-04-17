@@ -8,11 +8,7 @@
       .col-md-3
         .logo = image_tag 'iron-yard-logo.svg'
       .col-md-9
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi itaque
-            perspiciatis officiis maxime odit consequuntur nihil voluptas incidunt
-            harum omnis labore, aperiam illum accusantium, nulla perferendis. Minima,
-            placeat! Eos, in!
+        = simple_format @cohort.introduction
         p.learn-more
           a class="btn btn-primary btn-lg" href="http://theironyard.com/locations/tampa-st-petersburg/" role="button" Learn more
 

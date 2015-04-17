@@ -1,5 +1,5 @@
 ActiveAdmin.register Cohort do
-  permit_params :title, :is_current, :introductions
+  permit_params :title, :is_current, :introduction
 
   index do
     selectable_column
