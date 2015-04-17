@@ -4,4 +4,4 @@
       = image_tag program.logo_img_url, size: '143x128', alt: "#{program.title} Shield"
       h2= program.title
 
-= render program.projects
+= render program.projects.order(:order)
